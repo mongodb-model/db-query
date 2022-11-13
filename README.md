@@ -5,21 +5,21 @@
 ### Installation
 
 ```bash
-$ yarn add @eweah/db-query 
+$ yarn add @mongodb-model/db-query 
 
 ```
  or 
 
 ```bash
 
-$ npm i @eweah/db-query
+$ npm i @mongodb-model/db-query
 
 ```
 
 ### Simple Usage Example
 
 ```bash
- const Base = require('@eweah/db-query');
+ const Base = require('@mongodb-model/db-query');
  const base = new Base();
  base.apiGet();
  base.on('apiGet', data => console.log(data));
@@ -28,7 +28,7 @@ $ npm i @eweah/db-query
 ```
 or 
 ```bash
- class MyWonderfulClass extends require('@eweah/db-query') {
+ class MyWonderfulClass extends require('@mongodb-model/db-query') {
 
     constructor(...arrayOfObjects) {
 
