@@ -94,8 +94,8 @@ const {title, age, fullName, Post} = User
 ```
 #### Making api request (http request)
 ```javascript
-const DbCallback = require('@mongodb-model/db-query');
-const db = new DbCallback();
+const DbQuery = require('@mongodb-model/db-query');
+const db = new DbQuery();
 db.apiGet(); //base.apiGet(your api endpoint)
 db.on('apiGet', data => console.log(data));
 db.on('apiGet-error', error => console.error(error));
