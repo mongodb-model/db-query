@@ -134,15 +134,14 @@ class CallbackQuery extends require("./base") {
     return obj;
   }
 
-  createDatabaseCallback(databaseName = this.dbName) {
+  createDatabaseCallback(databaseName = this.db) {
     const dbFn = (error, db) => {
       if (error) return this.emit("createDatabase-error", error);
-      
       this.emit("createDatabase", db);
       db.close();
     };
     MongoClient.connect(
-      `${ENV.DATABASE.URL}${databaseName}`,
+      this.uri,
       { useUnifiedTopology: true },
       dbFn
     );
@@ -1164,4 +1163,8 @@ class CallbackQuery extends require("./base") {
 }
 
 module.exports = CallbackQuery;
+
+const query = new CallbackQuery
+
+console.log(query)
 
