@@ -1,6 +1,6 @@
 {
   "name": "@mongodb-model/db-query",
-  "version": "0.0.100001",
+  "version": "0.0.0",
   "description": "db-query",
   "main": "index.js",
   "bin": {
