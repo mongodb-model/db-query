@@ -1164,7 +1164,4 @@ class CallbackQuery extends require("./base") {
 
 module.exports = CallbackQuery;
 
-const query = new CallbackQuery
-
-console.log(query)
 
