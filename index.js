@@ -663,22 +663,23 @@ class CallbackQuery extends require("./base") {
    *
    */
   updateCallback(query = {}, data = {}, collectionName = this.collection) {
-    const dbfn = (error, db) => {
-      if (error) return this.emit("update-error", error);
+    console.log(data)
+    // const dbfn = (error, db) => {
+    //   if (error) return this.emit("update-error", error);
       
-      const dbs = db.db(this.db);
+    //   const dbs = db.db(this.db);
 
-      const cfn = (err, res) => {
-        if (err) {
-          db.close();
-          return this.emit("update-error", err);
-        }
-        this.emit("update", res);
-        db.close();
-      };
-      dbs.collection(collectionName).updateOne(query, { $set: data }, cfn);
-    };
-    this.connect(dbfn);
+    //   const cfn = (err, res) => {
+    //     if (err) {
+    //       db.close();
+    //       return this.emit("update-error", err);
+    //     }
+    //     this.emit("update", res);
+    //     db.close();
+    //   };
+    //   dbs.collection(collectionName).updateOne(query, { $set: data }, cfn);
+    // };
+    // this.connect(dbfn);
   }
 
   /**
